@@ -106,6 +106,22 @@
 </style>
 </head>
 <body>
+<script>
+// Osiguraj da notif nikad ne blokira klikove
+document.addEventListener('DOMContentLoaded', function() {
+  var n = document.getElementById('notif');
+  if (n) { n.style.pointerEvents = 'none'; }
+  // Fix nav klikova
+  document.querySelectorAll('.nav-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var page = this.id.replace('tab-', '');
+      if (page === 'statistika') page = 'statistika';
+      showPage(page);
+    });
+  });
+});
+</script>
 
 <!-- SETUP EKRAN (prikazuje se dok Firebase nije konfigurisan) -->
 <div id="setup-screen-wrapper" style="display:none">
