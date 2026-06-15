@@ -1,0 +1,19 @@
+{
+  "name": "Med Dostava",
+  "short_name": "Med 🍯",
+  "description": "Praćenje narudžbi, dostave i naplate meda",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF2",
+  "theme_color": "#C17800",
+  "orientation": "portrait",
+  "lang": "bs",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
